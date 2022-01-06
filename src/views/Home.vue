@@ -2,8 +2,8 @@
   <div class="hello">
     <img alt="Vue logo" src="../assets/logo.png" />
     <h1>Jokes Bapack-Bapack Generator</h1>
-
     <button @click="showresult()">Generate Joke</button>
+
     <div v-if="result">
       <p>{{ result }}</p>
     </div>
@@ -22,7 +22,6 @@ export default {
     return {
       result: "",
       result2: "",
-
       clicked: false,
     };
   },
@@ -31,8 +30,6 @@ export default {
       if (this.clicked) return;
       this.clicked = true;
       let config = {
-        method: "GET",
-        url: "https://dad-jokes.p.rapidapi.com/random/joke",
         headers: {
           "x-rapidapi-host": "dad-jokes.p.rapidapi.com",
           "x-rapidapi-key":
@@ -64,9 +61,4 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-p {
-  color: black;
-}
-</style>
+<style scoped></style>
